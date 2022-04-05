@@ -1,0 +1,6 @@
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\MOD\bin\Debug\MOD.dll
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\MOD\bin\Debug\MOD.pdb
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\MOD\obj\Debug\MOD.csproj.AssemblyReference.cache
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\MOD\obj\Debug\MOD.csproj.CoreCompileInputs.cache
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\MOD\obj\Debug\MOD.dll
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\MOD\obj\Debug\MOD.pdb

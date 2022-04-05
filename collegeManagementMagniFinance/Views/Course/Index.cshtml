@@ -1,0 +1,51 @@
+﻿@model IEnumerable<collegeManagementMagniFinance.Models.CourseModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+    <div ng-app="Courseapp" ng-controller="CourseController">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>QTD Teachers</th>
+                <th>QTD Students</th>
+                <th>AVG GRADES</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+
+
+            <tr ng-repeat="course in Courses">
+                <td>
+                    {{course.courseId}}
+                </td>
+                <td>
+                    {{course.courseName}}
+                </td>
+                <td>
+                    {{course.numberTeachersPerCourse}}
+                </td>
+                <td>
+                    {{course.numberOfStudentPerCourse}}
+                </td>
+                <td>
+                    {{course.avgGradesPerCourse}}
+                </td>
+                <td>
+                    <a href="/Course/Edit?id={{course.courseId}}"><button>Update</button></a>
+                </td>
+                <td>
+                    <button ng-click="deleteCourse(course.courseId)">Delete</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>

@@ -1,0 +1,40 @@
+﻿@model collegeManagementMagniFinance.Models.SubjectModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+<div class="form-horizontal" ng-app="Subjectapp" ng-controller="SubjectController" data-ng-init="loadSubject(@Convert.ToInt32(Request.QueryString["Id"]))">
+    <h4></h4>
+    <hr />
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Name</label>
+        <div class="col-md-10">
+            <input class="form-control" ng-model="register.Name" />
+        </div>
+    </div>
+    <div class="form-group">
+            <label class="control-label col-md-2">Name</label>
+            <div class="col-md-10">
+                <select ng-options="item as item.Name for item in register._teachers track by item.Id" ng-model="register.itemSelected"></select>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" ng-click="updatedata(register)" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }

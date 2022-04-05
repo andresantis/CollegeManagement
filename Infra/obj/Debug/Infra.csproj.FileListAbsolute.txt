@@ -1,0 +1,14 @@
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\obj\Debug\Infra.csproj.AssemblyReference.cache
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\obj\Debug\Infra.csproj.CoreCompileInputs.cache
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\Infra.dll.config
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\Infra.dll
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\Infra.pdb
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\EntityFramework.dll
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\MOD.dll
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\MOD.pdb
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\EntityFramework.xml
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\obj\Debug\Infra.csproj.CopyComplete
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\obj\Debug\Infra.dll
+C:\Users\AndreSantis\source\repos\collegeManagementMagniFinance\Infra\obj\Debug\Infra.pdb

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<collegeManagementMagniFinance.Models.SubjectModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div ng-app="Subjectapp" ng-controller="SubjectController">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <p>
+        @Html.ActionLink("See All Subjects", "AllSubjects")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>teacher Name</th>
+            <th>Teacher Birthday</th>
+            <th>Teacher Salary</th>
+            <th>Number of Students</th>
+            <th>Grades</th>
+        </tr>
+
+
+        <tr ng-repeat="subject in subjects">
+            <td>
+                {{subject.subjectId}}
+            </td>
+            <td>
+                {{subject.subjectName}}
+            </td>
+            <td>
+                {{subject.teacherName}}
+            </td>
+            <td>
+                {{subject.teacherBirthday.slice(6, -2) | date: 'dd/MM/yyyy'}}
+            </td>
+            <td>
+                {{subject.teacherSalary}}
+            </td>
+            <td>
+                {{subject.numberOfStudentPerCourse}}
+            </td>
+            <td>
+                {{subject.grade}}
+            </td>
+            <td>
+                <a href="/Subject/Edit?id={{subject.subjectId}}"><button>Update</button></a>
+            </td>
+            <td>
+                <button ng-click="deleteSubject(subject.subjectId)">Delete</button>
+            </td>
+        </tr>
+    </table>

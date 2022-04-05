@@ -1,0 +1,62 @@
+﻿@model collegeManagementMagniFinance.Models.StudentModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Student Edit</h2>
+
+
+
+
+<div class="form-horizontal" ng-app="Studentapp" ng-controller="StudentController" data-ng-init="loadStudent(@Convert.ToInt32(Request.QueryString["Id"]))">
+    <hr />
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label class="control-label col-md-2">Name</label>
+                    <div class="col-md-10">
+                        <input class="form-control mb-2" ng-model="register.Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Birthday</label>
+                    <div class="col-md-10">
+                        <input class="form-control" ng-model="register.Birthday.slice(6, -2) | date: 'dd/MM/yyyy'" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Resgister Number</label>
+                    <div class="col-md-10">
+                        <input class="form-control" ng-model="register.ResgisterNumber" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" ng-click="updatedata(register)" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+
+
+ 

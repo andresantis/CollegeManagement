@@ -1,0 +1,45 @@
+﻿@model IEnumerable<collegeManagementMagniFinance.Models.TeacherModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Teachers</h2>
+<div ng-app="Teacherapp" ng-controller="TeacherController">
+    <button class="mb-3 mt-2">
+        @Html.ActionLink("Create New", "Create")
+    </button>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Birthday</th>
+            <th>Salary</th>
+            <th>Resgister Number</th>
+        </tr>
+
+
+        <tr ng-repeat="teacher in Teachers">
+            <td>
+                {{teacher.Name}}
+            </td>
+            <td>
+                {{teacher.Birthday.slice(6, -2) | date: 'dd/MM/yyyy'}}
+            </td>
+            <td>
+                {{teacher.Salary}}
+            </td>
+            <td>
+                {{teacher.ResgisterNumber}}
+            </td>
+            <td>
+                <a href="/Teacher/Edit?id={{teacher.Id}}"><button>Update</button></a>
+            </td>
+            <td>
+                <button ng-click="deleteTeacher(teacher.Id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

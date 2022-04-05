@@ -1,0 +1,66 @@
+﻿@model collegeManagementMagniFinance.Models.SubjectModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Register Subject</h2>
+
+
+<div ng-app="Subjectapp" ng-controller="SubjectController" data-ng-init="getItemsToCreateSubject()">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-8">
+
+                <div class="form-group">
+
+                    <label>Name</label>
+
+                    <input type="text" ng-model="subjectModel.Name" class="form-control" />
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Course</label>
+
+                    <select ng-options="item as item.Name for item in createRegister.Courses track by item.Id" ng-model="subjectModel.selectedCourse"></select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Teacher</label>
+
+                    <select ng-options="item as item.Name for item in createRegister.Teachers track by item.Id" ng-model="subjectModel.selectedTeacher"></select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <input type="button" class="btn btn-primary" ng-click="savedata()" value="{{btntext}}" />
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-2"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

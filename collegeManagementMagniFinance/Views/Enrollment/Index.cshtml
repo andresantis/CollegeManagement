@@ -1,0 +1,42 @@
+﻿@model IEnumerable<collegeManagementMagniFinance.Models.EnrollmentModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div ng-app="Enrollmentapp" ng-controller="EnrollmentController">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>Student name</th>
+            <th>
+                Subject Name
+            </th>
+            <th>Grade</th>
+        </tr>
+
+
+        <tr ng-repeat="enrollment in Enrollments">
+            <td>
+                {{enrollment.studentName}}
+            </td>
+            <td>
+                {{enrollment.subjectName}}
+            </td>
+            <td>
+                {{enrollment.Grade}}
+            </td>
+            <td>
+                <a href="/Enrollment/Edit?id={{enrollment.enrollmentId}}"><button>Update</button></a>
+            </td>
+            <td>
+                <button ng-click="deleteEnrollment(enrollment.enrollmentId)">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

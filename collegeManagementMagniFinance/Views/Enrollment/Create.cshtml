@@ -1,0 +1,65 @@
+﻿@model collegeManagementMagniFinance.Models.EnrollmentModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Register Grade</h2>
+
+
+<div ng-app="Enrollmentapp" ng-controller="EnrollmentController" data-ng-init="getItemsToCreateGrade()">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-8">
+
+                <div class="form-group">
+
+                    <label>Grade</label>
+
+                    <input type="number" ng-model="enrollmentModel.Grade" class="form-control" />
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Subject</label>
+
+                    <select ng-options="item as item.studentName for item in createRegister.students track by item.studentId" ng-model="enrollmentModel.selectedStudent"></select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Student</label>
+
+                    <select ng-options="item as item.Name for item in createRegister.subjects track by item.Id" ng-model="enrollmentModel.selectedSubject"></select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <input type="button" class="btn btn-primary" ng-click="savedata()" value="{{btntext}}" />
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-2"></div>
+
+        </div>
+
+    </div>
+
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

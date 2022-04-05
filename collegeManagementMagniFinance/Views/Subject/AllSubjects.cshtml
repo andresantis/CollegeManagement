@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AllSubjects";
+}
+
+<h2>AllSubjects</h2>
+
+<div ng-app="Subjectapp" ng-controller="SubjectController" data-ng-init="getOnlySubjects()">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <p>
+        @Html.ActionLink("Back to Principal Page", "Index")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+        </tr>
+
+
+        <tr ng-repeat="subject in allSubjects">
+            <td>
+                {{subject.Id}}
+            </td>
+            <td>
+                {{subject.Name}}
+            </td>
+            <td>
+                <a href="/Subject/Edit?id={{subject.Id}}"><button>Update</button></a>
+            </td>
+            <td>
+                <button ng-click="deleteSubject(subject.Id)">Delete</button>
+            </td>
+        </tr>
+    </table>

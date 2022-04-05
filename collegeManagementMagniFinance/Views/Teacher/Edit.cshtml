@@ -1,0 +1,57 @@
+﻿@model collegeManagementMagniFinance.Models.TeacherModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Teacher</h2>
+
+
+<div class="form-horizontal" ng-app="Teacherapp" ng-controller="TeacherController" data-ng-init="loadTeacher(@Convert.ToInt32(Request.QueryString["Id"]))">
+    
+    <hr />
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Name</label>
+        <div class="col-md-10">
+            <input class="form-control" ng-model="register.Name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Birthday</label>
+        <div class="col-md-10">
+            <input class="form-control" ng-model="register.Birthday.slice(6, -2) | date: 'dd/MM/yyyy'" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Salary</label>
+        <div class="col-md-10">
+            <input class="form-control" ng-model="register.Salary" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Resgister Number</label>
+        <div class="col-md-10">
+            <input class="form-control" ng-model="register.ResgisterNumber" />
+        </div>
+    </div>
+    
+
+    
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" ng-click="updatedata(register)" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+
+<div>
+    <button>
+        @Html.ActionLink("Back to Teacher List", "Index")
+    </button>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,71 @@
+﻿@model collegeManagementMagniFinance.Models.TeacherModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Register Teacher</h2>
+
+
+<div ng-app="Teacherapp" ng-controller="TeacherController">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-8">
+
+                <div class="form-group">
+
+                    <label>Name</label>
+
+                    <input type="text" ng-model="teacherModel.Name" class="form-control" />
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Birthday</label>
+
+                    <input type="date" ng-model="teacherModel.Birthday" class="form-control" />
+                </div>
+
+                <div class="form-group">
+
+                    <label>Salary</label>
+
+                    <input type="text" ng-model="teacherModel.Salary" class="form-control" />
+                </div>
+
+                <div class="form-group">
+
+                    <label>ResgisterNumber</label>
+
+                    <input type="text" ng-model="teacherModel.ResgisterNumber" class="form-control" />
+                </div>
+
+                <div class="form-group">
+
+                    <input type="button" class="btn btn-primary" ng-click="savedata()" value="{{btntext}}" />
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-2"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button class="mb-3 mt-2">
+    @Html.ActionLink("Back to List", "Index")
+</button>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

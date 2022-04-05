@@ -1,0 +1,47 @@
+﻿@model collegeManagementMagniFinance.Models.EnrollmentModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+
+
+<div class="form-horizontal" ng-app="Enrollmentapp" ng-controller="EnrollmentController" data-ng-init="loadEnrollment(@Convert.ToInt32(Request.QueryString["Id"]))">
+    <h4>CourseModel</h4>
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Subject</label>
+        <div class="col-md-10">
+            <input class="form-control" disabled ng-model="register.subject.Name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Student</label>
+        <div class="col-md-10">
+            <input class="form-control" disabled ng-model="register.student.Name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Grade</label>
+        <div class="col-md-10">
+            <input class="form-control" ng-model="register.Grade" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <a href="/Enrollment/index"><input type="submit" ng-click="updatedata(register)" class="btn btn-default" /></a>
+</div>
+    </div>
+</div>
+
+<div>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

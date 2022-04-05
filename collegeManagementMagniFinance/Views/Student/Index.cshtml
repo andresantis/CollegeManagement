@@ -1,0 +1,44 @@
+﻿@model IEnumerable<collegeManagementMagniFinance.Models.StudentModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Students</h2>
+<div ng-app="Studentapp" ng-controller="StudentController">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>Birthday</th>
+            <th>ResgisterNumber</th>
+        </tr>
+
+
+        <tr ng-repeat="student in Students">
+            <td>
+                {{student.studentName}}
+            </td>
+            <td>
+                {{student.studentBirthday.slice(6, -2) | date: 'dd/MM/yyyy'}}
+            </td>
+            <td>
+                {{student.studentResgisterNumber}}
+            </td>
+            <td>
+                <span ng-repeat="grade in student.grades">{{grade}}    </span>
+            </td>
+            <td>
+                <a href="/Student/Edit?id={{student.studentId}}"><button>Update</button></a>
+            </td>
+            <td>
+                <button ng-click="deleteStudent(student.studentId)">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

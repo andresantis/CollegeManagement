@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-574-mexant.css">
+    <link rel="stylesheet" href="~/assets/css/owl.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-inverse navbar-fixed-top">
+        @Html.ActionLink("College Management", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Students", "Index", "Student")</li>
+                <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+                <li>@Html.ActionLink("Teachers", "Index", "Teacher")</li>
+                <li>@Html.ActionLink("Subjects", "Index", "Subject")</li>
+                <li>@Html.ActionLink("Grades", "Index", "Enrollment")</li>
+            </ul>
+        </div>
+    </nav>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="collapse nav">
+                    @Html.ActionLink("College Management", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Students", "Index", "Student")</li>
+                    <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+                    <li>@Html.ActionLink("Teachers", "Index", "Teacher")</li>
+                    <li>@Html.ActionLink("Subjects", "Index", "Subject")</li>
+                    <li>@Html.ActionLink("Grades", "Index", "Enrollment")</li>
+                </ul>
+            </div>
+        </div>
+    </div>*@
+    <hr />
+    <div class="container">
+        <hr />
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - College Management</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/ControllersAngular/StudentController.js"></script>
+    <script src="~/Scripts/ControllersAngular/TeacherController.js"></script>
+    <script src="~/Scripts/ControllersAngular/SubjectController.js"></script>
+    <script src="~/Scripts/ControllersAngular/CourseController.js"></script>
+    <script src="~/Scripts/ControllersAngular/EnrollmentController.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
